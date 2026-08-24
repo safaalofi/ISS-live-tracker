@@ -1,8 +1,8 @@
 #include<iostream> 
 #define CPPHTTPLIB_OPENSSL_SUPPORT // enables HTTPS in httplib
 // define comes before include httplib
-#include "C:\Users\safaa\Desktop\httplib.h" // allows the c++ program to communicate with web servers
-#include "C:\Users\safaa\Desktop\json.hpp"
+#include "httplib.h" // allows the c++ program to communicate with web servers
+#include "json.hpp"
 #include<thread>  //provides the ability to pause the currect thread
 #include<chrono> // provides the concept of time durations
 using json = nlohmann::json;
@@ -25,7 +25,7 @@ int main(){
         std::cout<<"Latitude:"<<latitude<<std::endl;
         std::cout<<"Altitude:"<<altitude<<std::endl;
         std::cout<<"Velocity:"<<velocity<<std::endl;
-        std::cout<<"Time:"<<time<<std::endl;
+        std::cout<<"Timestamp:"<<time<<std::endl;
         count++;
         std::this_thread::sleep_for(std::chrono::seconds(5));
     }
