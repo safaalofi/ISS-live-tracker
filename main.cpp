@@ -3,8 +3,8 @@
 // define comes before include httplib
 #include "C:\Users\safaa\Desktop\httplib.h" // allows the c++ program to communicate with web servers
 #include "C:\Users\safaa\Desktop\json.hpp"
-#include<thread>
-#include<chrono>
+#include<thread>  //provides the ability to pause the currect thread
+#include<chrono> // provides the concept of time durations
 using json = nlohmann::json;
 int main(){
     // create an http client called client
@@ -12,7 +12,7 @@ int main(){
     // send a GET request 
     json data;
     int count=0;
-    while (count<5){
+    while (true){
     if (auto res = client.Get("/v1/satellites/25544")){
         std::cout<< res->status <<std::endl;
         data = json::parse(res->body);
@@ -20,7 +20,7 @@ int main(){
         double latitude =data["latitude"];
         double altitude= data["altitude"];
         double velocity=data["velocity"];
-        double time= data["timestamp"];
+        long long time= data["timestamp"];
         std::cout<<"ID:"<<id<<std::endl;
         std::cout<<"Latitude:"<<latitude<<std::endl;
         std::cout<<"Altitude:"<<altitude<<std::endl;
