@@ -32,3 +32,10 @@ Timestamp:1787595547
 3. nlohmann/json
 4. REST API
 5. Git & Github
+
+## Future improvements 
+- Convert the Unix timestamp into a readable date and time.
+- Add logtitude
+- Display the ISS position on a map
+- Create a graphical interface
+- Add better error handling
