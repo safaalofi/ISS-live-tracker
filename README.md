@@ -19,14 +19,14 @@ the program periodically sends a GET request to the ISS API and displays:
 4. Velocity
 5. Timestamp
 
-# Example output : 
+## Example output : 
 ID:25544
 Latitude:24.0516
 Altitude:415.129
 Velocity:27602.6
 Timestamp:1787595547
 
-# Technologies used
+## Technologies used
 1. C++
 2. cpp-httplib
 3. nlohmann/json
